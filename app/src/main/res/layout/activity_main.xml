@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4F8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🦷 Дневник здоровья зубов"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1E3A5F"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Кнопка отметки чистки -->
+        <Button
+            android:id="@+id/brushNowButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="✅ Я почистил(а) зубы!"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- Статистика чистки -->
+        <TextView
+            android:id="@+id/streakText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🪅 Чисток сегодня: 0 из 2"
+            android:textSize="18sp"
+            android:padding="15dp"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="20dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🩺 Добавить визит к стоматологу"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- Выбор даты -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Дата визита:"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/datePickerButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="📅 Выбрать дату"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- Выбор времени -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Время визита:"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/timePickerButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="🕐 Выбрать время"
+            android:layout_marginBottom="15dp"/>
+
+        <EditText
+            android:id="@+id/doctorNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="👨‍⚕️ Имя врача"
+            android:layout_marginBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/visitNotesInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="📝 Заметки"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/addVisitButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="➕ Добавить визит"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📋 Предстоящие визиты"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/visitRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+
+    </LinearLayout>
+</ScrollView>
